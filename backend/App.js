@@ -25,6 +25,8 @@ app.use(middleware.requestLogger);
 app.use("/api/shortenedurls", urlRouter);
 app.use("/", mainRouter);
 
+app.use(express.static("build"));
+
 app.use(middleware.unknownEndpoint);
 app.use(middleware.errorHandler);
 
